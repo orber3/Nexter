@@ -2,13 +2,14 @@
   grid-column: center-start / center-end;
   grid-row: 2/2;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(25rem, 1fr)
-  ); //makes the grid responsive
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //makes the grid
   margin: 15rem 0;
   grid-gap: 6rem;
   align-items: start;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 3/3;
+  }
 }
 
 .feature {
